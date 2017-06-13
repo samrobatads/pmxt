@@ -46,3 +46,5 @@ channel: [Xt_Robo](http://telegram.me/xt_robo)
 
 Powered By: [XtBot](http://telegram.me/shahin_xtbot)
 
+# نمونه ربات 
+ [Robo XtBot](http://telegram.me/newXtBot)
