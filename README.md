@@ -7,6 +7,23 @@
 آموزش نصب بترتیب
 
 
+
+
+
+```
+git clone https://github.com/XtBot/pmxt.git
+cd pmxt
+```
+*Edit bot.py file and add your Bot Token to line 5 then:*
+
+```
+python3 bot.py
+```
+## مرحله قرار دادن توکن ربات خود در فایل و اضافه کردن ادمین هست که در تصویر پایین آموزش بصورت تصویری قرار دادم
+به شکل زیر
+
+![https://raw.githubusercontent.com/XtBot/xt/master/photo/2017-06-13_11_21_53.gif](https://raw.githubusercontent.com/XtBot/xt/master/photo/2017-06-13_11_21_53.gif)
+
 ## Installation
 **Ubuntu:**
 
@@ -22,21 +39,6 @@ sudo pip3 install pytelegrambotapi
 sudo pip3 install pytelegrambotapi --upgrade
 sudo pip3 install redis
 ```
-
-* Then we clone Repo and run bot.py
-```
-git clone https://github.com/XtBot/pmxt.git
-cd pmxt
-```
-*Edit bot.py file and add your Bot Token to line 5 then:*
-
-```
-python3 bot.py
-```
-## مرحله قرار دادن توکن ربات خود در فایل و اضافه کردن ادمین هست که در تصویر پایین آموزش بصورت تصویری قرار دادم
-به شکل زیر
-
-![https://raw.githubusercontent.com/XtBot/xt/master/photo/2017-06-13_11_21_53.gif](https://raw.githubusercontent.com/XtBot/xt/master/photo/2017-06-13_11_21_53.gif)
 
 Dev Info:
 
