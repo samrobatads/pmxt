@@ -13,8 +13,8 @@ import logging
 import subprocess
 import requests
 import os
-token = "199356209:AAHMUXxTeFXnsqwWjZxJD2Zc" #token
-sudo = 122774063 #admin
+token = "278033036:AAEElw-9_xSukj8w3ZbH8kSiW5pm7BgdI7o" #token
+sudo = 186280031 #admin
 bot = telebot.TeleBot(token)
 db = "https://api.telegram.org/bot{}/getMe?".format(token)
 res = urllib.request.urlopen(db)
@@ -78,7 +78,7 @@ def sadsd(m):
     try:
         if m.chat.id == logchat :
             R.delete("ads:{}".format(botuser))
-            bot.send_message(m.chat.id,"تبلیغات و حمایت شما از ما قطع شد :(")
+            bot.send_message(m.chat.id," :(")
     except Exception as e:
         print(e)
 @bot.message_handler(commands=['setlog'])
@@ -101,11 +101,11 @@ def remlog(m):
 def start(m):
     try :
         if m.chat.id == logchat :
-            text = 'سلام رئیس 👋\nدستورات از این قراره:\n\n/setstart <text>\nتنظیم متن شروع با قابلیت مارکداون\n/setwait <text>\nتنظیم متن ارسالی به کاربر بعد از پیام های وی با قابلیت مارکدون\n/ban <on reply/id>\nبن کردن یک نفر از پیام رسان\n/unban <on reply/id>\nآن بن کردن یک نفر از پیام رسان\n/users\nتعداد کاربران\n/bans\nتعداد افراد بن شده\n/showstart\nنمایش متن استارت فعلی\n/showwait\nدریافت متن انتظار فعلی\n/setlog <in group or private>\nتنظیم یک گروه به عنوان گروه ادمین\n/dellog\nحذف گروه ادمین\n/sendtoall <text>\nارسال یک متن به تمامی کاربران\n/fwdtoall <on reply>\nفوروارد یک پیام به تمامی اعضا\n/setflood <num>\nتنظیم تعداد پیام های ارسالی برای تشخیص اسپم (پیشفرض : ۵ در ۴ ثانیه)\n/setfloodtime <num>\nتنظیم زمان محدودیت ارسال پیام(پیشفرض : ۴)\n/msg <id> <text>\nفرستادن یک پیام به یک شخص از طریق آیدی\n/enableads\nحمایت از ما با تبلیغ سورس ربات :)\n/disableads\nقطع حمایت از ما :(\n\nنکته :‌برای جواب دادن به اشخاص روی پیام آنها ریپلای کنید\nنکته : پیشنهاد میشه تنظیمات فلود رو دستکاری نکنید \n\nبا آروزی خوشحالی برای شما\nمنتظر سورپرایز ها در ورژن بعدی باشید\n[iTeam](https://telegram.me/iTeam_ir)'
+            text = 'سلام مدیر 👋\nدستورات ربات PmXtBot به شکل زیر میباشد:\n\n/setstart <text>\nتنظیم متن شروع با قابلیت مارکدوان\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/setwait <text>\nتنظیم متن ارسالی به کاربر بعد از پیام های وی با قابلیت مارکدون\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/ban <on reply/id>\nبن کردن یک نفر از پیام\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n رسان\n/unban <on reply/id>\nآن بن کردن یک\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n نفر از پیام رسان\n/users\nتعداد کاربران\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/bans\nتعداد افراد بن شده\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/showstart\nنمایش متن استارت فعلی\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/showwait\nدریافت متن انتظار فعلی\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/setlog <in group or private>\nتنظیم یک گروه به عنوان گروه ادمین\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/dellog\nحذف گروه ادمین\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/sendtoall <text>\nارسال یک متن به تمامی کاربران\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/fwdtoall <on reply>\nفوروارد یک پیام به تمامی اعضا\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n/setflood <num>\nتنظیم تعداد پیام های ارسالی برای تشخیص اسپم (پیشفرض : در ۴ الی ۵\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n ثانیه)\n/setfloodtime <num>\nتنظیم زمان محدودیت ارسال پیام(پیشفرض : ۴)\n/msg <id> <text>\nفرستادن یک پیام به یک شخص از طریق آیدی\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\nربات پیام رسان و سینچی\n\nنکته :‌برای جواب دادن به اشخاص روی پیام آنها ریپلای کنید\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n \n\n \n[XtBot](https://telegram.me/xt_robo)'
             bot.send_message(logchat,text,parse_mode='Markdown')
         elif not m.chat.id == logchat :
             markup =  types.InlineKeyboardMarkup()
-            markup.add(types.InlineKeyboardButton('ربات خود را بسازید!', url='https://telegram.me/iTeam_ir/39'))
+            markup.add(types.InlineKeyboardButton('ربات خود را بسازید!', url='https://telegram.me/xt_robo/39'))
             if R.get("welcome:{}".format(str(botid))) :
                 tex3 = R.get("welcome:{}".format(str(botid)))
             else :
